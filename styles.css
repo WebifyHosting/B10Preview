@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Bloque Diez — Inversiones Inteligentes | Fintech Institutional Design System
+   Desarrollo técnico por WEBIFY
+   ========================================================================== */
+
+:root {
+  --bg-base: #070B14;
+  --surface-glass: rgba(15, 23, 42, 0.75);
+  --surface-glass-strong: rgba(15, 23, 42, 0.92);
+  --border-subtle: rgba(148, 163, 184, 0.14);
+  --border-hover: rgba(59, 130, 246, 0.4);
+  --accent-blue: #3B82F6;
+  --accent-blue-dark: #2563EB;
+  --accent-emerald: #10B981;
+}
+
+body {
+  background-color: var(--bg-base);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Cifras financieras y folios con alineación tabular perfecta */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Orbes de iluminación ambiental Fintech */
+.ambient-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(110px);
+  opacity: 0.22;
+}
+
+.orb-blue {
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, #3B82F6 0%, transparent 70%);
+  top: -180px;
+  left: -120px;
+}
+
+.orb-emerald {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #10B981 0%, transparent 70%);
+  bottom: -160px;
+  right: -120px;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at top center, black 35%, transparent 80%);
+}
+
+/* Superficies Glassmorphism */
+.glass-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  box-shadow: 0 20px 40px -18px rgba(37, 99, 235, 0.28);
+}
+
+.glass-modal {
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.75);
+}
+
+/* Botones principales */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-blue-dark) 100%);
+  color: #ffffff;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px -10px rgba(59, 130, 246, 0.65);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px -10px rgba(59, 130, 246, 0.85);
+}
+
+.btn-emerald {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: #ffffff;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px -10px rgba(16, 185, 129, 0.55);
+}
+
+.btn-emerald:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* Estados activos de navegación y selectores */
+.nav-link {
+  color: #94A3B8;
+}
+
+.nav-link:hover {
+  color: #F8FAFC;
+  background: rgba(30, 41, 59, 0.6);
+}
+
+.nav-link.active {
+  color: #FFFFFF;
+  background: rgba(59, 130, 246, 0.16);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.curr-btn {
+  color: #94A3B8;
+}
+
+.curr-btn.active {
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
+  color: #FFFFFF;
+}
+
+/* Animación de barras de progreso */
+.progress-fill {
+  transition: width 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Animaciones de entrada suaves */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeSlideUp 0.32s ease-out forwards;
+}
+
+/* Scrollbar elegante en dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Inputs dark mode */
+.input-fintech {
+  background: rgba(7, 11, 20, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #F8FAFC;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.input-fintech:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
+}
